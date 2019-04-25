@@ -1,0 +1,51 @@
+body {
+    font-family: 'MyriadPro' monospace, 'Courier New';
+    /* font-weight: bold; */
+    font-style: inherit;
+}
+
+.main {
+    width: 100%;
+    display: flex;
+}
+
+
+/* 
+.left{
+    width: 20%;
+    background: grey;
+}
+.center{
+    width: 80%;
+}
+.right{
+    width: 20%;
+    background: gray;
+} */
+
+th img {
+    border-radius: 50%;
+    height: 80px;
+    margin: 0 auto;
+    display: block;
+}
+
+.th {
+    text-align: center;
+    padding: 10px;
+}
+
+.feedimages {
+    width: 20px;
+    height: 20px;
+}
+
+ul li {
+    list-style-type: none;
+    line-height: 50px;
+    color: grey;
+}
+
+ul li span {
+    padding: 20px;
+}
