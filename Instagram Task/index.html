@@ -6,18 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Instagram</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+
+    <!-- Font Awesome CDN -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
 </head>
 
 <body>
-    <div>
+    <div class="main">
         <div class="row">
             <!-- left side start here -->
-            <div class="col-3" style="background:lightgray;">
+            <div class="col-md-3" style="background:#FAFAFA;">
                 <div>
                     <table>
                         <tr>
@@ -25,7 +27,7 @@
                                 <img src="images/Instagram-Logo.png" alt="" width="25px">
                             </td>
                             <td style="padding-top: 5px; top:5px">
-                                <img src="images/1200px-Instagram_logo.svg.png" alt="" width="100px">
+                                <img src="images/insta.png" alt="" width="100px">
                             </td>
                         </tr>
                     </table>
@@ -61,22 +63,13 @@
                     </table>
                 </div>
                 <div class="feeds">
-                    <!-- <table style="margin: 75px;">
-                        <tr>
-                            <td>
-                                <img src="images/feed.png" class="feedimages" alt="">
-                            </td>
-                            <td class="text-center">
-                                Feed
-                            </td>
-                        </tr>
-                    </table> -->
                     <ul>
-                        <li><img src="images/feed.png" class="feedimages" alt=""> <span>Feed</span> </li>
+                        <li class="active"><img src="images/feed.png" class="feedimages active" alt=""> <span>Feed</span> </li>
                         <li><img src="images/explore.png" class="feedimages" alt=""><span>Explore</span></li>
                         <li><img src="images/hash.png" class="feedimages" alt=""><span>Trending Tags</span> </li>
-                        <li><img src="images/topstory.png" class="feedimages" alt=""><span> Top Post</span></li>
-                        <li><img src="images/notification.png" class="feedimages" alt=""><span>Notifications</span> </li>
+                        <li><img src="images/topstory.png" class="feedimages" alt=""><span>Top Post</span></li>
+                        <li><img src="images/notification.png" class="feedimages" alt=""><span>Notifications</span>
+                        </li>
                         <li><img src="images/send.png" class="feedimages" alt=""><span>Direct</span> </li>
                         <li><img src="images/stats.png" class="feedimages" alt=""><span>Stats</span></li>
                         <li><img src="images/settings.png" class="feedimages" alt=""><span>Setting</span></li>
@@ -86,23 +79,95 @@
             <!-- left side ends here -->
 
             <!-- Center area start here -->
-            <div class="col-9">
-                <div class="navbar">
-                    <input type="text" name="search" placeholder="search">
-                    <button class="info">+ Create New Post</button>
-                </div>
+            <div class="col-md-9">
+                <table class="featuredtable">
+                    <tr>
+                        <td colspan="2"><input type="text" id="search" placeholder="search"></td>
+                        <td class="text-right"><button class="btn info">+ Create New Post</button>
+                            <img src="images/message.jpg" class="feedimages" alt="">
+                            <img src="images/heart.png" class="feedimages" alt="">
+                            <img src="images/thumb.png" style="border-radius:50%; height:30px;" alt="">
+                            <img src="images/menu.png" class="feedimages" alt="">
+                        </td>
+                    </tr>
+                </table>
+
+                <!-- inner box start here -->
                 <div class="row">
-                    <div class="col-8">
-                        <h1>center</h1>
+
+                    <!-- center portion -->
+                    <div class="col-md-8">
+                        <table class="table">
+                            <tr>
+                                <th colspan="2">
+                                    <h5>Featured Stories</h5>
+                                </th>
+                                <th colspan="2">
+                                    <input class="featuredbutton" type="text" placeholder="Popular Stories">
+                                </th>
+                            </tr>
+                            <tr>
+                                <td class="column"><img src="images/1.jpg" class="Featuredstories" alt=""></td>
+                                <td class="column"><img src="images/2.jpg" class="Featuredstories" alt=""></td>
+                                <td class="column"><img src="images/3.jpg" class="Featuredstories" alt=""></td>
+                                <td class="column"><img src="images/4.jpg" class="Featuredstories" alt=""></td>
+                            </tr>
+                        </table>
                     </div>
-                    <div class="col-4">
-                        <h1>right</h1>
+
+
+                    <!-- right side portion -->
+                    <div class="col-md-4">
+                        <div>
+                            <div class="rightportion">
+                                <img src="images/11.jpg" class="rightimage">
+                                <table class="righttable" style="margin-top:20px;">
+                                    <tr>
+                                        <th colspan="2">
+                                            <h5>BENJAMIN HARDMAN</h5>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>882</strong> Photos</td>
+                                        <td class="text-right"><strong>527k</strong> Followers</td>
+                                    </tr>
+                                </table>
+                                <p>Benjamin is a freelance photographer based in Iceland, represented across the nordic regions by Norður agency. </p>
+                                <p> Five years ago, Benjamin embarked on his first photographic mission in an Arctic winter climate...<strong>Read More</strong></p>
+
+                                <table class="profileInfo">
+                                    <tr>
+                                        <th>Locations</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Based in Iceland</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Profession</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Photographer</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Profession</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Photographer</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
             </div>
             <!-- Center area ends here -->
         </div>
+
     </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 </body>
 
 </html>
